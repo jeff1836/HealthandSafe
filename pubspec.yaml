@@ -6,9 +6,11 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  characters: ^1.4.1
-  material_color_utilities: ^0.13.0
-  meta: ^1.17.0
+  flutter: 
+    sdk: flutter
+  characters: ^1.4.0
+  material_color_utilities: ^0.11.1
+  meta: 1.16.0
 
 dev_dependencies:
   test_api: ^0.7.7

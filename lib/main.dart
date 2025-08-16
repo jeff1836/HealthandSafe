@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'routes.dart';
+import 'pages/settings_page.dart'; // make sure this path is correct
 
 void main() {
   runApp(const HealthApp());
 }
 
 class HealthApp extends StatelessWidget {
-  const HealthApp({Key? key}) : super(key: key);
-  // ...
-}
-
+  const HealthApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '安心健康',
-      theme: ThemeData(useMaterial3: true),
-      initialRoute: '/',
-      routes: appRoutes,
+      title: 'Health & Safe',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const SettingsPage(),
     );
   }
 }
