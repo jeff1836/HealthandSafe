@@ -6,7 +6,10 @@ void main() {
 }
 
 class HealthApp extends StatelessWidget {
-  const HealthApp({super.key});
+  const HealthApp({Key? key}) : super(key: key);
+  // ...
+}
+
 
   @override
   Widget build(BuildContext context) {

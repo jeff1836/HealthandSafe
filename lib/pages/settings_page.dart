@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+  const SettingsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,12 @@ class SettingsPage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.text_fields),
               title: const Text('字體大小'),
-              trailing: Slider(value: 16, min: 12, max: 24, onChanged: (val) {}),
+              trailing: Slider(
+                value: 16,
+                min: 12,
+                max: 24,
+                onChanged: (val) {},
+              ),
             ),
             SwitchListTile(
               title: const Text('語音導覽'),
@@ -26,3 +31,21 @@ class SettingsPage extends StatelessWidget {
               title: const Text('語言'),
               trailing: DropdownButton<String>(
                 value: '繁中',
+                items: [
+                  DropdownMenuItem(value: '繁中', child: Text('繁中')),
+                  DropdownMenuItem(value: 'English', child: Text('English')),
+                ],
+                onChanged: (val) {},
+              ),
+            ),
+            SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('登出'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
